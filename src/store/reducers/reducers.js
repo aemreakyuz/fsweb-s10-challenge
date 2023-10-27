@@ -11,19 +11,25 @@ const baslangicDegerleri = {
 };
 
 function localStorageStateYaz(key, data) {
-  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem("s10ch", JSON.stringify(data));
 }
 
 function localStorageStateOku(key) {
-  return JSON.parse(localStorage.getItem(key));
+  return JSON.parse(localStorage.getItem("s10ch"));
 }
 
 function baslangicNotlariniGetir(key) {
-  const eskiNotlar = localStorage.getItem(key);
+  const eskiNotlar = localStorage.getItem("s10ch");
 
   if (eskiNotlar) {
     return localStorageStateOku(key);
   } else {
-    return baslangicDegerleri
+    return baslangicDegerleri;
   }
 }
+
+function noteReducer() {
+  return <div>reducers</div>;
+}
+
+export default noteReducer;
